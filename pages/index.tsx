@@ -1,12 +1,21 @@
-import type {NextPage} from "next";
-import styles from "../styles/Home.module.css";
+import {Dropbox} from '@src/components/Dropbox';
+import {styled} from '@StitchesConfig';
+import type {NextPage} from 'next';
 
 const Home: NextPage = () => {
   return (
-    <div className={styles.container}>
-      <h1>Husky nextjs setup complete</h1>
-    </div>
+    <Wrapper>
+      <Dropbox />
+    </Wrapper>
   );
 };
 
 export default Home;
+
+const Wrapper = styled('div', {
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  width: '100%',
+  minHeight: '100vh',
+});
